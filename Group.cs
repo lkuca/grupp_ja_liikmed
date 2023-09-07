@@ -15,6 +15,9 @@ public class Group
 
     public bool AddMember(string member)
     {
+
+
+
         if (Members.Contains(member)) return false;
         if (Members.Count >= _maxAmount) return false;
         Members.Add(member);

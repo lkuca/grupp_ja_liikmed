@@ -7,8 +7,11 @@ public class Program
     {
         
 
-        Group group = new Group(3);
-        
+
+
+
+        Group group = new Group(3); /*liikmed liigmed = new liikmed();*/
+        //liikmed Likmed = new
         Console.WriteLine(group.AddMember("John"));  // True
         Console.WriteLine(group.AddMember("John"));  // False
         Console.WriteLine(group.AddMember("Mary"));  // True
