@@ -12,38 +12,31 @@ namespace grupp_ja_liikmed
 {
     public class liikmed
     {
+        public int aasta { get => aasta; }
+        public int kuupäev { get => kuupäev; }
+        public int kuu { get => kuu; }
+        public string nimi { get => nimi; }
 
-        private readonly string Nimi;
-        private readonly int Aasta;
-        private readonly int Kuupäev;
-        private readonly int Kuu;
 
-
-        public liikmed(string nimi, int aasta, int kuupäev, int kuu)
+        public liikmed()
         {
-            this.Aasta = aasta;
-            this.Nimi = nimi;
-            this.Kuupäev = kuupäev;
-            this.Kuu = kuu;
+           
 
         }
-        public int aasta { get => Aasta; }
-        public int kuupäev { get => Kuupäev; }
-        public int kuu { get => Kuu; }
-        public string nimi { get => Nimi; }
+        
 
-        public void randomyear()
-        {
-            Random r = new Random(); int aasta = r.Next(2000,2023);
-        }
-        public void randomkuupaev()
-        {
-            Random r = new Random(); int kuupäev = r.Next(1,31);
-        }
-        public void randomkuu()
-        {
-            Random r = new Random(); int kuu = r.Next(1,12);
-        }
+        //public void randomyear()
+        //{
+        //    Random r = new Random(); int aasta = r.Next(2000,2023);
+        //}
+        //public void randomkuupaev()
+        //{
+        //    Random r = new Random(); int kuupäev = r.Next(1,31);
+        //}
+        //public void randomkuu()
+        //{
+        //    Random r = new Random(); int kuu = r.Next(1,12);
+        //}
 
         public void taishaalikud()
         {
@@ -53,8 +46,8 @@ namespace grupp_ja_liikmed
             // creating a StringBuilder object()
             StringBuilder str_build = new StringBuilder();
             Random random = new Random();
-
-            string nimi;
+            char taht;
+            //string nimi;
 
             for (int i = 0; i < length; i++)
             {
@@ -62,18 +55,20 @@ namespace grupp_ja_liikmed
                 double flt = random.NextDouble();
                 //Функции floor возвращают значение с плавающей запятой, которое представляет наибольшее целое число, не превосходящее x . Ошибка не возвращается.
                 int shift = Convert.ToInt32(Math.Floor(25 * flt));
-                nimi = Convert.ToString(shift + 65);
-                str_build.Append(nimi);
-
-
-
-
-
-                Console.WriteLine(str_build.ToString(),aasta,kuupäev,kuu);
+                taht = Convert.ToChar(shift + 65);
+                str_build.Append(taht);
+                
 
 
             }
-            
+            int aasta = random.Next(2000, 2023);
+            int kuupäev = random.Next(1, 31);
+            int kuu = random.Next(1, 12);
+            string nimi = str_build.ToString();
+            Console.WriteLine(nimi + ' ' + aasta + '-' + kuupäev + '-' + kuu);
+            Console.WriteLine(nimi + ' ' + aasta + '-' + kuupäev + '-' + kuu);
+            Console.WriteLine(nimi + ' ' + aasta + '-' + kuupäev + '-' + kuu);
+            Console.WriteLine(nimi + ' ' + aasta + '-' + kuupäev + '-' + kuu);
             //Random rand = new Random();
 
 
@@ -118,7 +113,7 @@ namespace grupp_ja_liikmed
 
         //public static char randomnimi(string s)
         //{
-            
+
         //}
         //    public List<string> Liik { get; } = new List<string>();
         //    private readonly int daite;

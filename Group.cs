@@ -1,11 +1,12 @@
-﻿using System;
+﻿using grupp_ja_liikmed;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 public class Group
 {
-    public List<string> Members { get; } = new List<string>();
+    public List<liikmed> Members { get; } = new List<liikmed>();
     private readonly int _maxAmount;
 
     public Group(int maxAmount)
@@ -13,7 +14,7 @@ public class Group
         _maxAmount = maxAmount;
     }
 
-    public bool AddMember(string member)
+    public bool AddMember(liikmed member)
     {
 
 
@@ -29,7 +30,7 @@ public class Group
         return Members.Count;
     }
 
-    public bool HasMember(string member)
+    public bool HasMember(liikmed member)
     {
         return Members.Contains(member);
     }
